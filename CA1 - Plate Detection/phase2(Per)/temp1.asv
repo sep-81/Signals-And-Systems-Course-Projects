@@ -1,0 +1,15 @@
+clc;           
+clear;        
+close all;  
+
+
+di=dir('Alefba');
+st={di.name};
+nam=st(3:end);
+len=length(nam);
+fout = [];
+out = '.png'
+J = imread(['Alefba','\', out]); 
+
+J = ~J;
+imwrite(J, out);
